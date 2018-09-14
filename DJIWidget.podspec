@@ -35,8 +35,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   s.platform     = :ios, '8.0'
   s.source_files = 'DJIWidget/**/*.{h,m,c}'
   s.ios.public_header_files = 'DJIWidget/**/*.{h}'
-  s.ios.vendored_frameworks = 'FFmpeg/FFmpeg.framework'
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/Headers/Public/DJIWidget/FFmpeg/.."/**' }
-  s.pod_target_xcconfig = {'DEFINES_MODULE' => 'YES' }
-
+  #s.ios.vendored_frameworks = 'FFmpeg/FFmpeg.framework'
+  #s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/Headers/Public/DJIWidget/FFmpeg/.."/**' }
+  #s.pod_target_xcconfig = {'DEFINES_MODULE' => 'YES' }
+  s.dependent 'FFmpegPod'
 end
